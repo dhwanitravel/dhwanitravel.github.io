@@ -62,22 +62,33 @@
   
 
   <style>
-    #heroCarousel {
-      max-width: 100%;
-    }
+    /* General styles for carousel images */
+.car-img {
+  width: 100%;            /* Ensures the image takes up full width */
+  height: auto;           /* Maintains the aspect ratio */
+  object-fit: cover;      /* Ensures the image covers the area without distortion */
+}
 
-    .carousel-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-    }
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  #heroCarousel {
+    width: 100%;           /* Ensure the carousel container fits the mobile screen */
+  }
+  
+  .carousel-container {
+    padding: 0;            /* Remove extra padding on mobile devices */
+  }
+  
+  .btn-get-started {
+    font-size: 14px;       /* Adjust button size for mobile */
+    padding: 10px 20px;    /* Adjust padding for a better mobile look */
+  }
+  
+  svg.hero-waves {
+    display: none;         /* Optionally hide the waves on smaller screens */
+  }
+}
 
-    .car-img {
-      width: auto;
-      height: 400px; /* You can adjust this height as per your requirement */
-      object-fit: cover; /* Ensures the image fits within the space */
-    }
   </style>
 </head>
 
